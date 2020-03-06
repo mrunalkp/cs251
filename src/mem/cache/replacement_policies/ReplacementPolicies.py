@@ -69,6 +69,16 @@ class MRURP(BaseReplacementPolicy):
     cxx_class = 'MRURP'
     cxx_header = "mem/cache/replacement_policies/mru_rp.hh"
 
+class NMRURP(BaseReplacementPolicy):
+    type = 'NMRURP'
+    cxx_class = 'NMRURP'
+    cxx_header = "mem/cache/replacement_policies/nmru_rp.hh"
+    
+# class LIPRP(BaseReplacementPolicy):
+#     type = 'LIPRP'
+#     cxx_class = 'LIPRP'
+#     cxx_header = "mem/cache/replacement_policies/lip_rp.hh"
+    
 class RandomRP(BaseReplacementPolicy):
     type = 'RandomRP'
     cxx_class = 'RandomRP'

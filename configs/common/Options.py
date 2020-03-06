@@ -62,6 +62,10 @@ def _listCpuTypes(option, opt, value, parser):
     ObjectList.cpu_list.print()
     sys.exit(0)
 
+def _listReplTypes(option, opt, value, parser):
+    ObjectList.repl_list.print()
+    sys.exit(0)
+
 def _listBPTypes(option, opt, value, parser):
     ObjectList.bp_list.print()
     sys.exit(0)
@@ -171,6 +175,15 @@ def addCommonOptions(parser):
     parser.add_option("--cpu-type", type="choice", default="AtomicSimpleCPU",
                       choices=ObjectList.cpu_list.get_names(),
                       help = "type of cpu to run with")
+    parser.add_option("--list-repl-types",
+                      action="callback", callback=_listReplTypes,
+                      help="List available cache replacement policy types")
+    parser.add_option("--l1d_repl", type="choice", default="LRURP",
+                      choices=ObjectList.repl_list.get_names(),
+                      help = "replacement policy for l1 dcache")
+    parser.add_option("--l2_repl", type="choice", default="LRURP",
+                      choices=ObjectList.repl_list.get_names(),
+                      help = "replacement policy for l2 cache")
     parser.add_option("--list-bp-types",
                       action="callback", callback=_listBPTypes,
                       help="List available branch predictor types")

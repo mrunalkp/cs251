@@ -1,0 +1,24 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Mar  2 2020 20:22:59
+gem5 started Mar  2 2020 20:31:36
+gem5 executing on deneb, pid 10473
+command line: build/X86/gem5.opt -r -d results_hw3/sub1 configs/example/se.py --cmd=hw3/sub1 --cpu-type=DerivO3CPU --sys-clock=1GHz --cpu-clock=2GHz --mem-type=DDR3_1600_8x8 --caches --l2cache --l1d_size=64kB --l1i_size=16kB --l2_size=2MB
+
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+warn: ignoring syscall access(...)
+warn: ignoring syscall access(...)
+warn: ignoring syscall access(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+info: Increasing stack size by one page.
+SUB(3.600000, 1.200000) = 2.400000
+SUBR(3.600000, 1.200000) = -2.400000
+Exiting @ tick 231515000 because exiting with last active thread context
